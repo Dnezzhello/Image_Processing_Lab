@@ -41,11 +41,13 @@
             btn2 = new Button();
             btn1 = new Button();
             btnClose = new Button();
+            btn11 = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btn11);
             groupBox1.Controls.Add(btn5Plus);
             groupBox1.Controls.Add(btn10);
             groupBox1.Controls.Add(btn9);
@@ -60,14 +62,14 @@
             groupBox1.Font = new Font("Trebuchet MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox1.Location = new Point(44, 51);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(1079, 276);
+            groupBox1.Size = new Size(1122, 276);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "All Lab Work";
             // 
             // btn5Plus
             // 
-            btn5Plus.Location = new Point(929, 80);
+            btn5Plus.Location = new Point(964, 80);
             btn5Plus.Name = "btn5Plus";
             btn5Plus.Size = new Size(131, 51);
             btn5Plus.TabIndex = 10;
@@ -186,11 +188,21 @@
             btnClose.UseVisualStyleBackColor = true;
             btnClose.Click += btnClose_Click;
             // 
+            // btn11
+            // 
+            btn11.Location = new Point(964, 172);
+            btn11.Name = "btn11";
+            btn11.Size = new Size(131, 51);
+            btn11.TabIndex = 11;
+            btn11.Text = "Week 11";
+            btn11.UseVisualStyleBackColor = true;
+            btn11.Click += btn11_Click;
+            // 
             // main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1153, 404);
+            ClientSize = new Size(1186, 404);
             Controls.Add(btnClose);
             Controls.Add(groupBox1);
             Name = "main";
@@ -214,5 +226,6 @@
         private Button btn1;
         private Button btnClose;
         private Button btn5Plus;
+        private Button btn11;
     }
 }

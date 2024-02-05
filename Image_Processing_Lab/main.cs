@@ -77,5 +77,11 @@ namespace Image_Processing_Lab
             week_5_homework w5HW = new week_5_homework();
             w5HW.Show();
         }
+
+        private void btn11_Click(object sender, EventArgs e)
+        {
+            week11 w11 = new week11();
+            w11.Show();
+        }
     }
 }
