@@ -63,9 +63,9 @@ namespace Image_Processing_Lab
 
         private void btnMedian_Click(object sender, EventArgs e)
         {
-            
+
             ksize = int.Parse(txtBoxKSize.Text);
-            
+
             if (isGray)
             {
                 performEqualisation();
@@ -76,9 +76,10 @@ namespace Image_Processing_Lab
                 htgOutput.ClearHistogram();
                 htgOutput.GenerateHistograms(imgFilter, 255);
                 htgOutput.Refresh();
-            } else
+            }
+            else
             {
-                Image <Bgr, Byte> imgFilter = new Image<Bgr, Byte>(originalImage.Width, originalImage.Height);
+                Image<Bgr, Byte> imgFilter = new Image<Bgr, Byte>(originalImage.Width, originalImage.Height);
                 CvInvoke.MedianBlur(originalImage, imgFilter, ksize);
                 imgBoxOutput.Image = imgFilter;
                 imgBoxOutput.Refresh();
@@ -118,7 +119,7 @@ namespace Image_Processing_Lab
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Image<Gray, Byte> filteredImage1;  
+            Image<Gray, Byte> filteredImage1;
             Image<Bgr, Byte> filteredImage2;
 
             SaveFileDialog saveFilteredImg = new SaveFileDialog();
@@ -127,21 +128,22 @@ namespace Image_Processing_Lab
 
             if (isGray)
             {
-                filteredImage1 = (Image<Gray, Byte>) imgBoxOutput.Image;
+                filteredImage1 = (Image<Gray, Byte>)imgBoxOutput.Image;
                 if (saveFilteredImg.ShowDialog() == DialogResult.OK)
                 {
                     filteredImage1.Save(saveFilteredImg.FileName);
                 }
-                
 
-            } else
+
+            }
+            else
             {
-                filteredImage2 = (Image<Bgr, Byte>) imgBoxOutput.Image;
+                filteredImage2 = (Image<Bgr, Byte>)imgBoxOutput.Image;
                 if (saveFilteredImg.ShowDialog() == DialogResult.OK)
                 {
                     filteredImage2.Save(saveFilteredImg.FileName);
                 }
-            }   
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -157,7 +159,7 @@ namespace Image_Processing_Lab
 
         private void txtBoxKSize_TextChanged(object sender, EventArgs e)
         {
-       
+
         }
 
         private void rdBtnGray_CheckedChanged(object sender, EventArgs e)

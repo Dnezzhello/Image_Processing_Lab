@@ -4,6 +4,7 @@ using Emgu.CV.CvEnum;
 using System.Diagnostics;
 using System.IO.Pipes;
 using System.Text.RegularExpressions;
+using System.Drawing.Imaging;
 
 namespace Image_Processing_Lab
 {
@@ -106,13 +107,18 @@ namespace Image_Processing_Lab
         {
             SaveFileDialog svf = new SaveFileDialog();
             svf.Title = "Save Capture Image";
-            svf.DefaultExt = "*.Jpg";
+            svf.DefaultExt = "*.jpg";
             svf.Filter = "Jpeg Files (*.jpg)|*.jpg";
+
             if (svf.ShowDialog() == DialogResult.OK)
             {
                 imgBoxCapture.Image.Save(svf.FileName);
             }
         }
+
+
+
+
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {

@@ -83,5 +83,10 @@ namespace Image_Processing_Lab
             week11 w11 = new week11();
             w11.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
